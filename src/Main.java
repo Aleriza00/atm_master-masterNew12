@@ -1,13 +1,17 @@
+import atm.dao.AccountDao;
+import atm.service.AccountService;
 import atm.service.impl.AccountServiceImpl;
 
 public class Main {
     public static void main(String[] args) {
-        AccountServiceImpl accountService = new AccountServiceImpl();
-        accountService.singUp("Aleriza","Sultangazyeva");
-        accountService.singUp("Akmaral","Bermetova");
-        while (true){
-            accountService.singIn("Aleriza","Sultangazyeva");
+        AccountService service = new AccountServiceImpl();
+        service.singUp("Алериза", "Султангазыева");
+        service.singUp("Акмарал", "Берметова");
+
+        while (true) {
+                service.singIn();
+            }
+
         }
 
     }
-}
